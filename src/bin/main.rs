@@ -1,13 +1,10 @@
 use std::env;
 use ezio::tcp_server;
 use ezio::tcp_client;
+use ezio::udp_server;
 
 #[macro_use]
 extern crate log;
-
-// mod tcp_client;
-// mod udp_client;
-// mod udp_server;
 
 fn main() {
     env::set_var("RUST_LOG", "debug");
@@ -38,7 +35,9 @@ fn main() {
         },
         "udp" => match role {
             "server" => {
-                //
+                udp_server::serve(address).unwrap_or_else(|e| {
+                    error!("{}", e);
+                });
             },
             "client" => {
                 //

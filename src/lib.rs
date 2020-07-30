@@ -8,6 +8,7 @@ extern crate log;
 
 pub mod tcp_server;
 pub mod tcp_client;
+pub mod udp_server;
 
 // pub struct ThreadPool {
 //   workers: Vec<Worker>,
