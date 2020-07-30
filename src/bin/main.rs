@@ -1,5 +1,6 @@
 use std::env;
 use ezio::tcp_server;
+use ezio::tcp_client;
 
 #[macro_use]
 extern crate log;
@@ -27,7 +28,9 @@ fn main() {
                 });
             },
             "client" => {
-                //
+                tcp_client::connect(address).unwrap_or_else(|e| {
+                    error!("{}", e);
+                });
             },
             _ => {
                 missing_role();

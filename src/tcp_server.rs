@@ -4,6 +4,7 @@ use std::{str, thread};
 
 pub fn serve(address: &str) -> Result<(), failure::Error> {
   let listener = TcpListener::bind(address)?;
+  println!("Starting server...");
   loop {
     let (stream, _) = listener.accept()?;
     thread::spawn(move || {
