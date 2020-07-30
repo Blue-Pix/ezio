@@ -1,43 +1,57 @@
-extern crate ezio;
-use ezio::ThreadPool;
-use std::fs::File;
-use std::net::{TcpListener, TcpStream};
-use std::io::prelude::*;
-use std::thread;
-use std::time::Duration;
+use std::env;
+use ezio::tcp_server;
+
+#[macro_use]
+extern crate log;
+
+// mod tcp_client;
+// mod udp_client;
+// mod udp_server;
 
 fn main() {
-    let listener = TcpListener::bind("localhost:7878").unwrap();
-    let pool = ThreadPool::new(4);
-    for stream in listener.incoming().take(2) {
-        let stream = stream.unwrap();
-        pool.execute(|| {
-            handle_connection(stream);
-        });
+    env::set_var("RUST_LOG", "debug");
+    env_logger::init();
+    let args: Vec<String> = env::args().collect();
+    if args.len() != 4 {
+        error!("Please specify [tcp|udp] [server|client] [addr:port].");
+        std::process::exit(1);
+    }
+    let protocol: &str = &args[1];
+    let role: &str = &args[2];
+    let address = &args[3];
+    match protocol {
+        "tcp" => match role {
+            "server" => {
+                tcp_server::serve(address).unwrap_or_else(|e| {
+                    error!("{}", e);
+                });
+            },
+            "client" => {
+                //
+            },
+            _ => {
+                missing_role();
+            }
+        },
+        "udp" => match role {
+            "server" => {
+                //
+            },
+            "client" => {
+                //
+            },
+            _ => {
+                missing_role();
+            }
+        },
+        _ => {
+            error!("Please specify tcp or udp on the 1st argument.");
+            std::process::exit(1);
+        }
     }
 }
 
-fn handle_connection(mut stream: TcpStream) {
-    let mut buffer = [0; 512];
-    stream.read(&mut buffer).unwrap();
-
-    let root = b"GET / HTTP/1.1\r\n";
-    let sleep = b"GET /sleep HTTP/1.1\r\n";
-
-    let (headers, filename) = if buffer.starts_with(root) {
-        ("HTTP/1.1 200 OK\r\n", "index.html")
-    } else if buffer.starts_with(sleep) {
-        thread::sleep(Duration::from_secs(10));
-        ("HTTP/1.1 200 OK\r\n", "index.html")
-    } else {
-        ("HTTP/1.1 404 NOT FOUND\r\n", "404.html")
-    };
-
-    let mut file = File::open(filename).unwrap();
-    let mut body = String::new();
-    file.read_to_string(&mut body).unwrap();
-    
-    let response = format!("{}\r\n{}", headers, body);
-    stream.write(response.as_bytes()).unwrap();
-    stream.flush().unwrap();
+fn missing_role() {
+    error!("Please specify server or client on the 2nd argument.");
+    std::process::exit(1);
 }
