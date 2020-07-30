@@ -2,6 +2,7 @@ use std::env;
 use ezio::tcp_server;
 use ezio::tcp_client;
 use ezio::udp_server;
+use ezio::udp_client;
 
 #[macro_use]
 extern crate log;
@@ -40,7 +41,9 @@ fn main() {
                 });
             },
             "client" => {
-                //
+                udp_client::communicate(address).unwrap_or_else(|e| {
+                    error!("{}", e);
+                })
             },
             _ => {
                 missing_role();
