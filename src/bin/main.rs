@@ -11,6 +11,15 @@ fn main() {
     env::set_var("RUST_LOG", "debug");
     env_logger::init();
     let args: Vec<String> = env::args().collect();
+    simple_socket(&args);
+}
+
+fn missing_role() {
+    error!("Please specify server or client on the 2nd argument.");
+    std::process::exit(1);
+}
+
+fn simple_socket(args: &Vec<String>) {
     if args.len() != 4 {
         error!("Please specify [tcp|udp] [server|client] [addr:port].");
         std::process::exit(1);
@@ -54,9 +63,4 @@ fn main() {
             std::process::exit(1);
         }
     }
-}
-
-fn missing_role() {
-    error!("Please specify server or client on the 2nd argument.");
-    std::process::exit(1);
 }
