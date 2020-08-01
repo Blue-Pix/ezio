@@ -6,10 +6,7 @@
 #[macro_use]
 extern crate log;
 
-pub mod tcp_server;
-pub mod tcp_client;
-pub mod udp_server;
-pub mod udp_client;
+pub mod simple_socket;
 pub mod packets;
 
 // pub struct ThreadPool {
