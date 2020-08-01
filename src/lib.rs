@@ -7,7 +7,7 @@
 extern crate log;
 
 pub mod simple_socket;
-pub mod packets;
+pub mod custom_socket;
 
 // pub struct ThreadPool {
 //   workers: Vec<Worker>,
