@@ -8,13 +8,16 @@ use ezio::custom_socket;
 use ezio::port_scanner;
 #[allow(unused_imports)]
 use ezio::web_server_v2;
+#[allow(unused_imports)]
+use ezio::dhcp_server;
 
 fn main() {
     env::set_var("RUST_LOG", "debug");
     env_logger::init();
-    let args: Vec<String> = env::args().collect();
+    // let args: Vec<String> = env::args().collect();
     // simple_socket::run(&args);
     // custom_socket::run(&args);
     // port_scanner::run(&args);
-    web_server_v2::run(&args);
+    // web_server_v2::run(&args);
+    dhcp_server::run();
 }
