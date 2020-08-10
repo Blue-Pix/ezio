@@ -23,5 +23,7 @@ fn main() {
     // web_server_v2::run(&args);
     // dhcp_server::run();
     // cookbook::algorithms::generate_random_values::random_password_custom();
-    cookbook::algorithms::sort_a_vector::sort_a_vector_of_struct();
+    // cookbook::algorithms::sort_a_vector::sort_a_vector_of_struct();
+    // cookbook::command_line::argument_parsing::run();
+    cookbook::command_line::ansi_terminal::print_bold_and_coloured_text();
 }
