@@ -10,6 +10,8 @@ use ezio::port_scanner;
 use ezio::web_server_v2;
 #[allow(unused_imports)]
 use ezio::dhcp_server;
+#[allow(unused_imports)]
+use ezio::cookbook;
 
 fn main() {
     env::set_var("RUST_LOG", "debug");
@@ -19,5 +21,7 @@ fn main() {
     // custom_socket::run(&args);
     // port_scanner::run(&args);
     // web_server_v2::run(&args);
-    dhcp_server::run();
+    // dhcp_server::run();
+    // cookbook::algorithms::generate_random_values::random_password_custom();
+    cookbook::algorithms::sort_a_vector::sort_a_vector_of_struct();
 }
