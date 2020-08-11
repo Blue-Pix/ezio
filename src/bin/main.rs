@@ -31,5 +31,7 @@ fn main() {
     // cookbook::concurrency::data_parallelism::parallel_gen_thumbnail();
     // cookbook::cryptography::hashing::verify_sign();
     // cookbook::cryptography::encryption::password_with_pbkdf2();
-    cookbook::data_structures::run();
+    // cookbook::data_structures::run();
+    // cookbook::database::sqlite::transaction();
+    cookbook::database::postgres::aggregate();
 }
