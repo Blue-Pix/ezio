@@ -28,5 +28,7 @@ fn main() {
     // cookbook::command_line::ansi_terminal::print_bold_and_coloured_text();
     // cookbook::compression::compress_into_tarball();
     // cookbook::concurrency::explicit_threads::draw_fractal_image();
-    cookbook::concurrency::data_parallelism::parallel_gen_thumbnail();
+    // cookbook::concurrency::data_parallelism::parallel_gen_thumbnail();
+    // cookbook::cryptography::hashing::verify_sign();
+    cookbook::cryptography::encryption::password_with_pbkdf2();
 }
