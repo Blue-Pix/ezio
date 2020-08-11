@@ -30,5 +30,6 @@ fn main() {
     // cookbook::concurrency::explicit_threads::draw_fractal_image();
     // cookbook::concurrency::data_parallelism::parallel_gen_thumbnail();
     // cookbook::cryptography::hashing::verify_sign();
-    cookbook::cryptography::encryption::password_with_pbkdf2();
+    // cookbook::cryptography::encryption::password_with_pbkdf2();
+    cookbook::data_structures::run();
 }
