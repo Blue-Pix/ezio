@@ -26,5 +26,7 @@ fn main() {
     // cookbook::algorithms::sort_a_vector::sort_a_vector_of_struct();
     // cookbook::command_line::argument_parsing::run();
     // cookbook::command_line::ansi_terminal::print_bold_and_coloured_text();
-    cookbook::compression::compress_into_tarball();
+    // cookbook::compression::compress_into_tarball();
+    // cookbook::concurrency::explicit_threads::draw_fractal_image();
+    cookbook::concurrency::data_parallelism::parallel_gen_thumbnail();
 }
