@@ -33,5 +33,7 @@ fn main() {
     // cookbook::cryptography::encryption::password_with_pbkdf2();
     // cookbook::data_structures::run();
     // cookbook::database::sqlite::transaction();
-    cookbook::database::postgres::aggregate();
+    // cookbook::database::postgres::aggregate();
+    // cookbook::date_and_time::duration_and_calculation::local_timezone();
+    cookbook::date_and_time::parsing_and_displaying::parse();
 }
