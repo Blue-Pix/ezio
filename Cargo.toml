@@ -3,6 +3,10 @@ name = "ezio"
 version = "0.1.0"
 authors = ["sakuraya <bluepixel1214@gmail.com>"]
 edition = "2018"
+build = "src/cookbook/development_tools/build_time_tooling/build.rs"
+
+[build-dependencies]
+cc = "1"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -38,3 +42,7 @@ data-encoding = "2.3.0"
 bitflags = "1.2.1"
 postgres = "0.17.5"
 chrono = "0.4.13"
+syslog = "5.0.0"
+log4rs = "0.13.0"
+semver = "0.10.0"
+cc = "1.0.58"

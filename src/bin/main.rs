@@ -35,5 +35,8 @@ fn main() {
     // cookbook::database::sqlite::transaction();
     // cookbook::database::postgres::aggregate();
     // cookbook::date_and_time::duration_and_calculation::local_timezone();
-    cookbook::date_and_time::parsing_and_displaying::parse();
+    // cookbook::date_and_time::parsing_and_displaying::parse();
+    // cookbook::development_tools::debugging::custom_location();
+    // let _ = cookbook::development_tools::versioning::external_command_version();
+    let _ = cookbook::development_tools::build_time_tooling::custom_define();
 }
