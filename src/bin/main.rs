@@ -38,5 +38,8 @@ fn main() {
     // cookbook::date_and_time::parsing_and_displaying::parse();
     // cookbook::development_tools::debugging::custom_location();
     // let _ = cookbook::development_tools::versioning::external_command_version();
-    let _ = cookbook::development_tools::build_time_tooling::custom_define();
+    // let _ = cookbook::development_tools::build_time_tooling::custom_define();
+    // let _ = cookbook::encoding::character_sets::_base64();
+    // let _ = cookbook::encoding::csv_processing::transform_csv_column();
+    let _ = cookbook::encoding::structured_data::little_endian();
 }

@@ -7,3 +7,4 @@ pub mod data_structures;
 pub mod database;
 pub mod date_and_time;
 pub mod development_tools;
+pub mod encoding;
