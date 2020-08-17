@@ -46,5 +46,7 @@ fn main() {
     //     Ok(uptime) => println!("uptime: {} seconds", uptime),
     //     Err(err) => eprintln!("error: {}", err)
     // }
-    cookbook::error_handling::obtain_backtrace();
+    // cookbook::error_handling::obtain_backtrace();
+    // let _ = cookbook::file_system::read_write::access_file_randomly();
+    let _ = cookbook::file_system::directory_traversal::glob_with_option();
 }

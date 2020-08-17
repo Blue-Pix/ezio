@@ -54,3 +54,5 @@ serde = { version = "1.0.115", features = ["derive"] }
 serde_json = "1.0.57"
 toml = "0.5.6"
 reqwest = { version = "0.10.7", features = ["blocking"] }
+same-file = "1.0.6"
+memmap = "0.7.0"
