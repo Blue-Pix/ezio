@@ -10,3 +10,4 @@ pub mod development_tools;
 pub mod encoding;
 pub mod error_handling;
 pub mod file_system;
+pub mod hardware_support;
