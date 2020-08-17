@@ -49,5 +49,6 @@ fn main() {
     // cookbook::error_handling::obtain_backtrace();
     // let _ = cookbook::file_system::read_write::access_file_randomly();
     // let _ = cookbook::file_system::directory_traversal::glob_with_option();
-    let _ = cookbook::hardware_support::count_cpu_cores();
+    // let _ = cookbook::hardware_support::count_cpu_cores();
+    let _ = cookbook::memory_management::lazy_constant();
 }
