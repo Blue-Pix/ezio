@@ -41,5 +41,10 @@ fn main() {
     // let _ = cookbook::development_tools::build_time_tooling::custom_define();
     // let _ = cookbook::encoding::character_sets::_base64();
     // let _ = cookbook::encoding::csv_processing::transform_csv_column();
-    let _ = cookbook::encoding::structured_data::little_endian();
+    // let _ = cookbook::encoding::structured_data::little_endian();
+    // match cookbook::error_handling::read_uptime() {
+    //     Ok(uptime) => println!("uptime: {} seconds", uptime),
+    //     Err(err) => eprintln!("error: {}", err)
+    // }
+    cookbook::error_handling::obtain_backtrace();
 }
