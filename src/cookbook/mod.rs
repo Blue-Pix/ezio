@@ -12,3 +12,4 @@ pub mod error_handling;
 pub mod file_system;
 pub mod hardware_support;
 pub mod memory_management;
+pub mod networking;
