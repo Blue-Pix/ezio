@@ -51,7 +51,8 @@ fn main() {
     // let _ = cookbook::file_system::directory_traversal::glob_with_option();
     // let _ = cookbook::hardware_support::count_cpu_cores();
     // let _ = cookbook::memory_management::lazy_constant();
-    if let Err(e) = cookbook::networking::assign_unused_port() {
-        eprintln!("{}", e);
-    }
+    // if let Err(e) = cookbook::networking::assign_unused_port() {
+    //     eprintln!("{}", e);
+    // }
+    let _ = cookbook::operating_system::read_env();
 }
