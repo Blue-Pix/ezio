@@ -54,5 +54,6 @@ fn main() {
     // if let Err(e) = cookbook::networking::assign_unused_port() {
     //     eprintln!("{}", e);
     // }
-    let _ = cookbook::operating_system::read_env();
+    // let _ = cookbook::operating_system::read_env();
+    cookbook::science::calc_big_integer();
 }

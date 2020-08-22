@@ -14,3 +14,4 @@ pub mod hardware_support;
 pub mod memory_management;
 pub mod networking;
 pub mod operating_system;
+pub mod science;
