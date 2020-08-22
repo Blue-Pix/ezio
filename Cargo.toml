@@ -59,3 +59,5 @@ memmap = "0.7.0"
 ndarray = { version = "0.13.1", features = ["approx"] }
 approx = "0.3.2"
 nalgebra = "0.21.1"
+unicode-segmentation = "1.6.0"
+

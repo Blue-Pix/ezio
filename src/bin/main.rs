@@ -55,5 +55,6 @@ fn main() {
     //     eprintln!("{}", e);
     // }
     // let _ = cookbook::operating_system::read_env();
-    cookbook::science::calc_big_integer();
+    // cookbook::text_processing::regular_expressions::replace()
+    cookbook::text_processing::string_parsing::custom_from_str()
 }
