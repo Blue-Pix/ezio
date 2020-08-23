@@ -56,5 +56,11 @@ fn main() {
     // }
     // let _ = cookbook::operating_system::read_env();
     // cookbook::text_processing::regular_expressions::replace()
-    cookbook::text_processing::string_parsing::custom_from_str()
+    // cookbook::text_processing::string_parsing::custom_from_str()
+    // cookbook::web_programming::extracting_links::extract_all_links();
+    // cookbook::web_programming::url::remove_fragment();
+    // cookbook::web_programming::media_types::get_mime_from_http_response();
+    if let Err(e) = cookbook::web_programming::clients::partial_download() {
+        eprintln!("{}", e);
+    }
 }
